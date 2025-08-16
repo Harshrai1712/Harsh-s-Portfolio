@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Badge } from "./ui/badge";
 import { Eye } from "lucide-react";
 
+// Global flag to ensure counter only increments once per page load
+let hasIncrementedThisSession = false;
+
 const VisitCounter = () => {
   const [visitCount, setVisitCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -12,20 +15,18 @@ const VisitCounter = () => {
       try {
         // Get existing visit count from localStorage
         const storedCount = localStorage.getItem('portfolioVisitCount');
-        const storedDate = localStorage.getItem('portfolioLastVisit');
-        const today = new Date().toDateString();
-
+        
         let currentCount = 0;
 
         if (storedCount) {
           currentCount = parseInt(storedCount, 10);
         }
 
-        // Check if this is a new visit (different day or first time)
-        if (!storedDate || storedDate !== today) {
+        // Only increment if this is the first component instance in this page load
+        if (!hasIncrementedThisSession) {
           currentCount += 1;
           localStorage.setItem('portfolioVisitCount', currentCount.toString());
-          localStorage.setItem('portfolioLastVisit', today);
+          hasIncrementedThisSession = true;
         }
 
         setVisitCount(currentCount);
@@ -38,9 +39,20 @@ const VisitCounter = () => {
       }
     };
 
+    // Reset the flag when page unloads so it increments on refresh
+    const handleBeforeUnload = () => {
+      hasIncrementedThisSession = false;
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
     // Small delay to ensure component is mounted
     const timer = setTimeout(initializeCounter, 100);
-    return () => clearTimeout(timer);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
   }, []);
 
   const formatCount = (count) => {

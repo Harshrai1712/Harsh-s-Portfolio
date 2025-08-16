@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 // import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import VisitCounter from "./visit-counter";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,6 +65,7 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-glow transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            <VisitCounter />
             <div className="scale-hover">
               {/* <ThemeToggle /> */}
             </div>
@@ -71,6 +73,7 @@ const Navigation = () => {
 
           {/* Mobile Navigation Button */}
           <div className="md:hidden flex items-center space-x-4">
+            <VisitCounter />
             {/* <ThemeToggle /> */}
             <Button
               variant="ghost"

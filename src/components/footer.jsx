@@ -1,5 +1,6 @@
 import { Heart, Code, Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import VisitCounter from "./visit-counter";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -104,6 +105,8 @@ const Footer = () => {
             <span>by Harsh Rai</span>
             <span className="mx-2">•</span>
             <span>© 2025 All rights reserved</span>
+            <span className="mx-2">•</span>
+            <VisitCounter />
           </div>
 
           <Button

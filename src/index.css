@@ -242,6 +242,210 @@
     }
   }
 
+  /* Skills section specific float animation */
+  @keyframes skillFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  /* Progress bar animations */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(300%);
+    }
+  }
+
+  /* Percentage counter animation */
+  .skill-percentage.animate-count {
+    animation: countUp 2s ease-out forwards;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Shimmer effect for progress bars */
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  /* Floating wave animation for badges */
+  @keyframes floatWave {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-8px) rotate(1deg);
+    }
+    50% {
+      transform: translateY(-4px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-12px) rotate(-1deg);
+    }
+  }
+
+  /* Enhanced floating badge styles */
+  .floating-badge {
+    position: relative;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, hsl(var(--background))/80, hsl(var(--card))/60);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 4px 12px hsl(var(--foreground))/5;
+  }
+
+  .floating-badge:hover {
+    backdrop-filter: blur(12px);
+    box-shadow: 
+      0 8px 25px hsl(var(--primary))/15,
+      0 0 0 1px hsl(var(--primary))/20;
+  }
+
+  /* Magnetic hover effect */
+  .floating-badge:hover {
+    animation-play-state: paused;
+    transform: translateY(-8px) scale(1.1) !important;
+  }
+
+  /* Badge appear animation */
+  .animate-badge-appear {
+    animation: badgeAppear 0.6s ease-out forwards;
+  }
+
+  @keyframes badgeAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Ripple effect on hover */
+  .floating-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, hsl(var(--primary))/20 0%, transparent 70%);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+  }
+
+  .floating-badge:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Typing animation styles */
+  .typing-text {
+    font-family: 'Inter', monospace;
+    white-space: nowrap;
+  }
+
+  /* Smooth typing text */
+  .typing-text-smooth {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    transition: all 0.1s ease-out;
+  }
+
+  /* Ultra smooth typing text */
+  .typing-text-ultra-smooth {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.025em;
+    display: inline-block;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left center;
+  }
+
+  /* Enhanced character reveal animation */
+  .typing-text-ultra-smooth {
+    animation: ultraSmoothReveal 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes ultraSmoothReveal {
+    from {
+      opacity: 0;
+      transform: translateY(4px) scale(0.95);
+      filter: blur(1px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  /* Smooth text flow */
+  .typing-text-ultra-smooth::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    animation: textShimmer 0.3s ease-out;
+  }
+
+  @keyframes textShimmer {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+  }
+
+  /* Character reveal animation */
+  .typing-text-smooth {
+    animation: textReveal 0.1s ease-out;
+  }
+
+  @keyframes textReveal {
+    from {
+      opacity: 0.7;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Cursor blink animation */
+  @keyframes cursorBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Typing cursor */
+  .typing-cursor {
+    animation: cursorBlink 1s infinite;
+  }
+
+  /* Smooth text reveal */
+  .typing-text {
+    overflow: hidden;
+    border-right: 2px solid transparent;
+  }
+
   @keyframes pulseGlow {
     0%, 100% {
       box-shadow: 0 0 20px hsl(var(--primary) / 0.3);

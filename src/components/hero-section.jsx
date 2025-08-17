@@ -1,8 +1,30 @@
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const fullName = "HARSH RAI";
+
+  // Typing animation effect
+  useEffect(() => {
+    if (currentIndex < fullName.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + fullName[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 120); // Smoother, more natural typing speed
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullName]);
+
+  // Reset animation on component mount
+  useEffect(() => {
+    setDisplayedText("");
+    setCurrentIndex(0);
+  }, []);
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
@@ -33,19 +55,21 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
-            HARSH RAI
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-500 min-h-[1.2em] flex items-center justify-center">
+            <span className="typing-text-ultra-smooth">
+              {displayedText}
+            </span>
           </h1>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 font-light slide-in-left">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 font-light slide-in-left" style={{ animationDelay: '1.4s' }}>
             Computer Science Engineering Student
           </h2>
-          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed slide-in-right">
+          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed slide-in-right" style={{ animationDelay: '1.7s' }}>
             3rd year BTech CSE student at IIIT Jabalpur, passionate about MERN stack development and competitive programming. 
             Building innovative web applications and solving complex problems.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 slide-up">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 slide-up" style={{ animationDelay: '2s' }}>
             <Button 
               variant="hero" 
               size="lg"
@@ -69,7 +93,7 @@ const HeroSection = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 slide-up">
+          <div className="flex justify-center space-x-6 slide-up" style={{ animationDelay: '2.3s' }}>
             <Button variant="ghost" size="icon" className="h-12 w-12 rounded-full hover:bg-primary/20 hover:scale-125 hover:rotate-12 transition-all duration-300 stagger-1" asChild>
               <a href="https://github.com/Harshrai1712" target="_blank" rel="noopener noreferrer">
                 <Github className="h-6 w-6" />

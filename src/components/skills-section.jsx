@@ -88,71 +88,71 @@ const SkillsSection = () => {
   };
   // Animated skill icons with names
   const animatedSkills = [
-    { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", color: "#A8B9CC" },
-    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", color: "#00599C" },
-    { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", color: "#ED8B00" },
-    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", color: "#3776AB" },
-    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#F7DF1E" },
-    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", color: "#181717" },
     { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "#61DAFB" },
+    { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", color: "#009688" },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", color: "#3776AB" },
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
+    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#ffffff" },
     { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", color: "#47A248" },
-    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "#F05032" },
-    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#000000" },
-    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", color: "#E34F26" },
-    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", color: "#1572B6" },
+    { name: "SQLite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg", color: "#003B57" },
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#F7DF1E" },
+    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", color: "#00599C" },
+    { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", color: "#A8B9CC" },
+    { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg", color: "#764ABC" },
     { name: "Tailwind", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", color: "#06B6D4" },
     { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", color: "#7952B3" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "#F05032" },
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", color: "#ffffff" },
     { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", color: "#4479A1" }
   ];
 
   const skillCategories = [
     {
+      title: "AI & Generative AI",
+      icon: "🤖",
+      skills: [
+        { name: "LLM Integration & Prompt Engineering", level: 92 },
+        { name: "Agentic AI Basics & Workflows", level: 88 },
+        { name: "RAG & Vector Retrieval Systems", level: 86 },
+        { name: "Groq LLM Accelerated Inference", level: 90 },
+        { name: "Voice & Conversational Agents", level: 85 },
+        { name: "n8n Workflow Automation", level: 82 }
+      ]
+    },
+    {
+      title: "Full Stack & Web Development",
+      icon: "🌐",
+      skills: [
+        { name: "React.js & Redux", level: 92 },
+        { name: "Python FastAPI", level: 88 },
+        { name: "Node.js & Express.js", level: 88 },
+        { name: "MongoDB & SQLite", level: 86 },
+        { name: "RESTful APIs Architecture", level: 90 },
+        { name: "Tailwind CSS & Bootstrap", level: 90 }
+      ]
+    },
+    {
       title: "Programming Languages",
       icon: "💻",
       skills: [
         { name: "C++", level: 90 },
-        { name: "Python", level: 85 },
+        { name: "Python", level: 90 },
         { name: "JavaScript", level: 88 },
-        { name: "Java", level: 70 },
         { name: "C", level: 85 },
-        { name: "SQL", level: 75 }
+        { name: "SQL & NoSQL", level: 85 },
+        { name: "HTML5 & CSS3", level: 92 }
       ]
     },
     {
-      title: "Web Development",
-      icon: "🌐",
-      skills: [
-        { name: "React.js", level: 90 },
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "Tailwind CSS", level: 88 }
-      ]
-    },
-    {
-      title: "Tools & Technologies",
-      icon: "🛠️",
-      skills: [
-        { name: "Git/GitHub", level: 90 },
-        { name: "Bootstrap", level: 85 },
-        { name: "Redux", level: 80 },
-        { name: "NoSQL", level: 75 },
-        { name: "Cloud Deployment", level: 70 },
-        { name: "Version Control", level: 90 }
-      ]
-    },
-    {
-      title: "Core CS Concepts",
+      title: "Core CS & Enterprise Tech",
       icon: "🎓",
       skills: [
-        { name: "Data Structures & Algorithms", level: 70 },
-        { name: "Operating Systems", level: 80 },
-        { name: "Database Management", level: 85 },
-        { name: "Computer Networks", level: 75 },
-        { name: "OOP Concepts", level: 80 },
-        { name: "Computer Architecture", level: 88 }
+        { name: "Data Structures & Algorithms", level: 88 },
+        { name: "Object Oriented Programming (OOP)", level: 90 },
+        { name: "Database Management (DBMS)", level: 88 },
+        { name: "Operating Systems & Networks", level: 84 },
+        { name: "ERP Systems & SAP BTP / Fiori", level: 80 },
+        { name: "Git, GitHub & Version Control", level: 92 }
       ]
     }
   ];
@@ -300,8 +300,10 @@ const SkillsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 rounded-2xl blur-2xl"></div>
             <div className="relative flex flex-wrap justify-center gap-4 max-w-4xl mx-auto p-6">
               {[
-                "MERN Stack", "Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks",
-                "OOP", "Web Development", "Cloud Deployment", "Problem Solving", "Teamwork", "Redux"
+                "GenAI & LLM Integration", "Agentic AI Basics", "Python FastAPI", "Groq Accelerated LLMs",
+                "ERP Systems & SAP BTP", "SAP Fiori", "MERN Stack", "Retrieval-Augmented Gen (RAG)",
+                "WebRTC & Socket.IO", "Data Structures & Algorithms", "SQLite & MongoDB", "n8n Workflow Automation",
+                "Prompt Engineering", "RESTful APIs", "Problem Solving", "Analytical Thinking"
               ].map((tech, index) => (
                 <Badge 
                   key={index} 

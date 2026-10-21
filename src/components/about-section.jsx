@@ -1,27 +1,27 @@
-import { GraduationCap, Code, Heart, Target } from "lucide-react";
+import { GraduationCap, Code, Heart, Target, Building2, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "Education",
-      description: "BTech CSE student at IIIT Jabalpur with focus on MERN stack and competitive programming"
+      title: "Final Year BTech CSE",
+      description: "Indian Institute of Information Technology Jabalpur (2023 – 2027) with strong foundation in core CS and software engineering"
+    },
+    {
+      icon: Building2,
+      title: "Bosch SE Intern",
+      description: "Engineered an AI-powered Knowledge Agent across 6 domains with FastAPI, React, SQLite, and Groq LLMs"
     },
     {
       icon: Code,
-      title: "Passion",
-      description: "Love building full-stack applications and solving algorithmic challenges"
+      title: "Full Stack & GenAI",
+      description: "Specialized in MERN stack, Python FastAPI, LLM integration, prompt engineering, and Agentic AI workflows"
     },
     {
-      icon: Heart,
-      title: "Dedication",
-      description: "Committed to writing clean, efficient code and best practices"
-    },
-    {
-      icon: Target,
-      title: "Goal",
-      description: "Aspiring to become a skilled full-stack developer and contribute to innovative tech solutions"
+      icon: Award,
+      title: "Certified & Problem Solver",
+      description: "Oracle & Google AI certified, 300+ algorithmic coding problems solved across CodeChef, Codeforces, and LeetCode"
     }
   ];
 
@@ -33,7 +33,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A passionate software engineering student on a journey to master the art of code
+            A software engineer building scalable full-stack applications and intelligent agentic AI systems
           </p>
         </div>
 
@@ -42,34 +42,37 @@ const AboutSection = () => {
           <div className="space-y-6 slide-up">
             <div className="space-y-4">
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Hello! I'm a dedicated Computer Science Engineering student currently in my 3rd year at 
-                Indian Institute of Information Technology Jabalpur. My journey in technology began with 
-                curiosity and has evolved into a deep passion for creating innovative web solutions.
+                Hello! I'm a Computer Science and Engineering student currently in my <span className="text-primary font-semibold">final year</span> at the 
+                <span className="font-semibold text-foreground"> Indian Institute of Information Technology Jabalpur</span>.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and have hands-on 
-                experience building full-stack applications. I'm proficient in multiple programming languages 
-                including C++, Python, Java, and JavaScript, with a strong foundation in data structures and algorithms.
+                During my internship as a <span className="text-primary font-semibold">Software Engineer Intern at Bosch Global Software Technologies</span> in Bengaluru, 
+                I built <span className="font-semibold text-foreground">Helix AI</span>—an enterprise-grade AI knowledge agent featuring text and voice interfaces across 6 knowledge domains, 
+                leveraging React.js, Python FastAPI, SQLite, and Groq LLMs, while gaining foundational knowledge in enterprise ERP, SAP BTP, and SAP Fiori workflows.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                When I'm not coding, you'll find me participating in competitive programming contests, 
-                building real-world projects, or exploring new technologies in web development and cloud deployment.
+                I combine strong full-stack skills (React.js, Node.js, Express.js, FastAPI, MongoDB, SQLite) with modern Generative AI engineering, prompt engineering, 
+                and RAG retrieval pipelines. I am also an active problem solver with over 300+ algorithmic challenges solved across LeetCode, CodeChef, and Codeforces.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">2+</div>
-                <div className="text-sm text-muted-foreground">Years Coding</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
+              <div className="p-4 rounded-xl bg-card/60 border border-primary/20 text-center">
+                <div className="text-3xl font-bold text-primary">Bosch</div>
+                <div className="text-xs text-muted-foreground mt-1">SE Internship</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">10+</div>
-                <div className="text-sm text-muted-foreground">Projects Built</div>
+              <div className="p-4 rounded-xl bg-card/60 border border-primary/20 text-center">
+                <div className="text-3xl font-bold text-primary">300+</div>
+                <div className="text-xs text-muted-foreground mt-1">Problems Solved</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">8+</div>
-                <div className="text-sm text-muted-foreground">Technologies</div>
+              <div className="p-4 rounded-xl bg-card/60 border border-primary/20 text-center">
+                <div className="text-3xl font-bold text-primary">5+</div>
+                <div className="text-xs text-muted-foreground mt-1">AI Certifications</div>
+              </div>
+              <div className="p-4 rounded-xl bg-card/60 border border-primary/20 text-center">
+                <div className="text-3xl font-bold text-primary">2027</div>
+                <div className="text-xs text-muted-foreground mt-1">Graduation Year</div>
               </div>
             </div>
           </div>

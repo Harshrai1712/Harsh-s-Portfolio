@@ -20,13 +20,14 @@ const Footer = () => {
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#achievements", label: "Achievements" },
     { href: "#contact", label: "Contact" },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:alex.johnson@email.com", label: "Email" },
+    { icon: Github, href: "https://github.com/Harshrai1712", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/harshrai1712/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:harshrai1217@gmail.com", label: "Email" },
   ];
 
   return (
@@ -43,8 +44,7 @@ const Footer = () => {
               <Code className="h-6 w-6 text-primary" />
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Computer Science Engineering student at IIIT Jabalpur specializing in MERN stack development 
-              and competitive programming. Building innovative solutions with modern technologies.
+              Final-year Computer Science Engineering student at IIIT Jabalpur and ex-Software Engineer Intern at Bosch Global Software Technologies. Specializing in Full Stack Development and GenAI/Agentic systems.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (

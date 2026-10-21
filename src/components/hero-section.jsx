@@ -44,28 +44,33 @@ const HeroSection = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 border border-primary/30 rounded-full pulse-glow"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 border border-primary-glow/40 rounded-lg rotate-45 float"></div>
-        <div className="absolute bottom-32 left-20 w-12 h-12 bg-primary/20 rounded-full float rotate-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-primary/20 rounded-lg rotate-12 pulse-glow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-gradient-to-r from-primary to-primary-glow rounded-full float" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/3 right-1/3 w-6 h-6 border border-primary/40 rounded-full animate-ping" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 border border-primary/20 rounded-full pulse-glow"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 border border-accent/30 rounded-lg rotate-45 float"></div>
+        <div className="absolute bottom-32 left-20 w-12 h-12 bg-accent/15 rounded-full float rotate-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-primary/15 rounded-lg rotate-12 pulse-glow" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-6 h-6 border border-accent/30 rounded-full animate-ping" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/5 rounded-full blur-3xl float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-40 h-40 bg-accent/5 rounded-full blur-3xl float" style={{ animationDelay: '3.5s' }}></div>
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-500 min-h-[1.2em] flex items-center justify-center">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent hover:scale-105 transition-transform duration-500 min-h-[1.2em] flex items-center justify-center tracking-tight">
             <span className="typing-text-ultra-smooth">
               {displayedText}
             </span>
           </h1>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 font-light slide-in-left" style={{ animationDelay: '1.4s' }}>
-            Computer Science Engineering Student
+          <h2 className="text-xl sm:text-2xl lg:text-3xl text-foreground/70 mb-2 font-light font-display tracking-wide slide-in-left" style={{ animationDelay: '1.4s' }}>
+            Former Software Engineer Intern <span className="text-accent">@</span> <span className="text-primary font-medium">Bosch</span>
           </h2>
+          <h3 className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 font-light font-display tracking-wide slide-in-right" style={{ animationDelay: '1.6s' }}>
+            Final-Year BTech CSE Student <span className="text-accent">•</span> IIIT Jabalpur
+          </h3>
           <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed slide-in-right" style={{ animationDelay: '1.7s' }}>
-            3rd year BTech CSE student at IIIT Jabalpur, passionate about MERN stack development and competitive programming. 
-            Building innovative web applications and solving complex problems.
+            Final-year BTech CSE student at IIIT Jabalpur and former Software Engineer Intern at <span className="text-primary font-semibold">Bosch Global Software Technologies</span>. 
+            Specializing in Full Stack Development, Generative AI &amp; Agentic AI systems, and competitive problem solving.
           </p>
 
           {/* CTA Buttons */}

@@ -5,60 +5,61 @@ import { Badge } from "@/components/ui/badge";
 const ExperienceSection = () => {
   const experiences = [
     {
+      type: "work",
+      title: "Software Engineer Intern",
+      company: "Bosch Global Software Technologies",
+      location: "Bengaluru, India",
+      duration: "May 2026 - Jul 2026",
+      description: "Gained foundational knowledge of ERP systems, SAP BTP, and SAP Fiori, along with Supply Chain Management and enterprise IT workflows, before spearheading the full-stack and Generative AI development of Helix AI—an enterprise AI Knowledge Agent built with React.js, Python FastAPI, SQLite, and Groq-accelerated LLMs featuring conversational text and voice interfaces.",
+      achievements: [
+        "Built an AI-powered Knowledge Agent with text and voice interfaces across 6 knowledge domains, applying Generative AI and LLM integration to capture and structure employee expertise",
+        "Worked full-stack across React.js, Python FastAPI, and SQLite, building RESTful APIs across a 4-table database schema connecting frontend, backend, and database layers",
+        "Worked with 2 LLMs (via Groq) to balance speed and accuracy across each stage of the extraction pipeline",
+        "Strengthened full-stack development and AI engineering capabilities through hands-on enterprise experience"
+      ],
+      tech: ["React.js", "Python FastAPI", "SQLite", "Groq LLM", "GenAI", "ERP Systems", "SAP BTP", "SAP Fiori", "REST APIs"]
+    },
+    {
       type: "education",
-      title: "Bachelor of Technology - Computer Science and Engineering",
+      title: "Bachelor of Technology - Computer Science and Engineering (Final Year)",
       company: "Indian Institute of Information Technology Jabalpur",
       location: "Jabalpur, India",
       duration: "Aug 2023 - Aug 2027",
-      description: "Pursuing BTech in Computer Science and Engineering with focus on data structures, algorithms, web development, and system design. Strong foundation in programming and software engineering principles.",
+      description: "Currently in final year of BTech CSE with a strong focus on data structures, algorithms, full-stack web development, and artificial intelligence.",
       achievements: [
-        "Coursework: DSA, OS, DBMS, Computer Networks",
-        "Active in competitive programming",
-        "MERN stack development projects"
+        "Final Year BTech CSE (Graduating Aug 2027)",
+        "Coursework: DSA, OOP, DBMS, Operating Systems, Computer Networks, Computer Architecture, Software Engineering, AI",
+        "Active in competitive programming with 300+ problems solved across platforms"
       ],
-      tech: ["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks", "Web Development"]
+      tech: ["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks", "Artificial Intelligence", "OOP"]
     },
     {
       type: "work",
-      title: "Full Stack Developer",
-      company: "Personal Projects",
+      title: "Full Stack & AI Developer",
+      company: "Independent & Open Source Projects",
       location: "Remote",
       duration: "Jan 2024 - Present",
-      description: "Developed multiple full-stack applications using MERN stack including video calling platform, travel booking system, and competitive programming analytics tool.",
+      description: "Engineered scalable web applications and AI-driven tools including real-time video conferencing (Apna-VideoCall), travel booking (WanderStay), and CP analytics (Rank-Sphere).",
       achievements: [
-        "Built 3 major full-stack projects",
-        "Implemented real-time features with WebRTC",
-        "Deployed applications on cloud platforms"
+        "Built 4 full-stack applications with MERN and FastAPI stacks",
+        "Integrated WebRTC peer-to-peer audio/video streaming & Socket.IO live signaling",
+        "Implemented JWT authentication, Cloudinary media handling, and cloud deployments on Render"
       ],
-      tech: ["MongoDB", "Express.js", "React", "Node.js", "WebRTC", "Socket.IO"]
+      tech: ["MongoDB", "Express.js", "React.js", "Node.js", "FastAPI", "WebRTC", "Socket.IO", "Redux"]
     },
     {
       type: "work",
-      title: "Competitive Programming",
-      company: "Various Platforms",
+      title: "Competitive Programmer",
+      company: "CodeChef, Codeforces, LeetCode",
       location: "Online",
       duration: "Sep 2023 - Present",
-      description: "Active participant in competitive programming contests on CodeChef, Codeforces, and LeetCode. Solved 200+ problems and participated in regular contests.",
+      description: "Regular contest participant and problem solver tackling algorithmic challenges to hone data structure and algorithmic complexity mastery.",
       achievements: [
-        "Solved 200+ coding problems",
-        "Regular contest participation",
-        "Strong problem-solving skills"
+        "300+ Coding Problems Solved (CodeChef, Codeforces, LeetCode)",
+        "Proficiency in Graph Theory, Dynamic Programming, and Greedy Algorithms",
+        "Strong analytical and time-efficient problem-solving mindset"
       ],
       tech: ["C++", "Python", "Algorithms", "Data Structures", "Problem Solving"]
-    },
-    {
-      type: "work",
-      title: "Open Source Contributor",
-      company: "GitHub",
-      location: "Remote",
-      duration: "Dec 2023 - Present",
-      description: "Contributing to open source projects and maintaining personal repositories. Focus on web development tools and educational resources.",
-      achievements: [
-        "10+ GitHub repositories",
-        "Active open source contributor",
-        "Collaborative development experience"
-      ],
-      tech: ["Git", "GitHub", "React", "Node.js", "Documentation"]
     }
   ];
 
